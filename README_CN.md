@@ -6,7 +6,7 @@
 这是一个全新底部菜单交互的实现 [再见，汉堡菜单，我们有了新的 Android 交互设计方案](https://github.com/xitu/gold-miner/blob/master/TODO/bye-bye-burger.md)
 
 
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/preview.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/preview.gif)
 
 
 
