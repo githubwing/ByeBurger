@@ -21,13 +21,13 @@
 
     <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView
         app:layout_behavior="@string/bye_burger_behavior"
-        android:background="#fff"
+        android:background="@color/colorPrimary"
         android:layout_gravity="bottom"
         android:id="@+id/bye_burger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/colorPrimary"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
         app:menu="@menu/bottom"
         >
     </com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView>
