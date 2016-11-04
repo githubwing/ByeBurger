@@ -1,22 +1,20 @@
 # ByeBurgerNavigationView
-Bye Burger~  this is a new android Bottom Navigation like this
+滚粗吧 汉堡菜单
 
-[Bye, Bye Burger!
-What we learned from implementing the new Android Bottom Navigation](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.qibuxdc1t)
+这是一个全新底部菜单交互的实现 [再见，汉堡菜单，我们有了新的 Android 交互设计方案](https://github.com/xitu/gold-miner/blob/master/TODO/bye-bye-burger.md)
 
-
-##[中文文档](https://github.com/githubwing/ByeBurgerNavigationView/blob/master/README_CN.MD)
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/preview.gif)
 
-> **Hiding on scroll:** We wanted to provide as much content as possible on our user’s screens. Consequently, we decided to make the navigation hide on scroll, thus making more room for the content area. Scrolling up makes the navigation fade back in.
-
-> **Shifting navigation** : The Material Design bottom bar comes with a very slick animation, which is referred to as the Shifting navigation — when navigating between destinations the selected section icon is enlarged, moving the unselected element to the back. Flipping through destinations on the nav bar thus feels a bit like browsing through a carousel. We decided to utilize this effect as it adds a playful note to switching sections, which we hoped would nudge our users into navigating to different areas in the app more often. Further, the animation plays a major part in our next point…
 
 
-# USAGE
+> *   **滚动时隐藏：** 我们希望在用户的屏幕上显示尽可能多的内容。因此，我们决定在向下滚动的时候隐藏导航栏，从而给内容区域提供更多的空间。而向上滚动可以使导航栏重新显现。
+> *   **变换式导航栏：** Material Design 底部栏有一个非常平滑的动画，它参考了变换式导航栏——在不同目标间切换的时候，被选中的部分会被放大，同时未被选中的元素会被向后移动，从而在导航栏上浏览不同的目标就有点像在浏览一个旋转木马。我们决定要使用这种效果因为它使得切换导航目标变得更加有趣了。我们希望这可以推动我们的用户更多地在应用的不同功能组间切换。同时，该动画在我们的下一个观点中非常重要。
 
-compile the library in your build.gralde
+# 使用
+
+在gradle 编译库文件
+
 
 ```
   compile project(':library')
@@ -24,7 +22,7 @@ compile the library in your build.gralde
   compile 'com.android.support:design:25.0.0'
 ```
 
-layout xml
+在布局中。使用CoordinatorLayout作为跟布局
 
 ```
 <android.support.design.widget.CoordinatorLayout>
@@ -44,7 +42,7 @@ layout xml
 ```
 
 
-menu xml
+在menu文件夹创建新的menu xml
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -76,7 +74,7 @@ menu xml
 </menu>
 ```
 
-addOnSelectedListener
+添加选项监听器addOnSelectedListener
 ```
 mByeBurger.setOnNavigationItemSelectedListener(
         new BottomNavigationView.OnNavigationItemSelectedListener() {
