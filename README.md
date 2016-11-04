@@ -5,7 +5,7 @@ Bye Burger~  this is a new android Bottom Navigation like this
 What we learned from implementing the new Android Bottom Navigation](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.qibuxdc1t)
 
 
-##[中文文档](https://github.com/githubwing/ByeBurgerNavigationView/blob/master/README_CN.MD)
+##[中文文档](https://github.com/githubwing/ByeBurgerNavigationView/blob/master/README_CN.md)
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/preview.gif)
 
