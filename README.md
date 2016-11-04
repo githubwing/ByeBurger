@@ -10,7 +10,7 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 
 ##[中文文档](https://github.com/githubwing/ByeBurgerNavigationView/blob/master/README_CN.md)
 
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/preview.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/preview.gif)
 
 > **Hiding on scroll:** We wanted to provide as much content as possible on our user’s screens. Consequently, we decided to make the navigation hide on scroll, thus making more room for the content area. Scrolling up makes the navigation fade back in.
 
