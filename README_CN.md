@@ -1,5 +1,5 @@
 # ByeBurgerNavigationView
-滚粗吧 汉堡菜单
+拜拜吧 汉堡菜单
 
 [![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
 
