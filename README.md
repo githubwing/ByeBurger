@@ -19,9 +19,19 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 compile the library in your build.gralde
 
 ```
-  compile project(':library')
-  
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+dependencies {
+  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
   compile 'com.android.support:design:25.0.0'
+  }
 ```
 
 layout xml
