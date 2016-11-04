@@ -1,4 +1,7 @@
 # ByeBurgerNavigationView
+[![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
+
+
 Bye Burger~  this is a new android Bottom Navigation like this
 
 [Bye, Bye Burger!
@@ -18,15 +21,25 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 
 compile the library in your build.gralde
 
-```
-  compile project(':library')
-  
+```gradle
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+dependencies {
+  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
   compile 'com.android.support:design:25.0.0'
+  }
 ```
 
 layout xml
 
-```
+```xml
 <android.support.design.widget.CoordinatorLayout>
   <Viewpager />
   <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView 
@@ -46,7 +59,7 @@ layout xml
 
 menu xml
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -77,7 +90,7 @@ menu xml
 ```
 
 addOnSelectedListener
-```
+```java
 mByeBurger.setOnNavigationItemSelectedListener(
         new BottomNavigationView.OnNavigationItemSelectedListener() {
           @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
