@@ -1,5 +1,6 @@
 # ByeBurgerNavigationView
 滚粗吧 汉堡菜单
+
 [![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
 
 这是一个全新底部菜单交互的实现 [再见，汉堡菜单，我们有了新的 Android 交互设计方案](https://github.com/xitu/gold-miner/blob/master/TODO/bye-bye-burger.md)
@@ -16,7 +17,7 @@
 
 在gradle 编译库文件
 
-```xml
+```gralde
 
 allprojects {
     repositories {
