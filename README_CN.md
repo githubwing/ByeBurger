@@ -16,7 +16,7 @@
 
 在gradle 编译库文件
 
-```
+```xml
 
 allprojects {
     repositories {
@@ -33,7 +33,7 @@ dependencies {
 ```
 在布局中。使用CoordinatorLayout作为跟布局
 
-```
+```xml
 <android.support.design.widget.CoordinatorLayout>
   <Viewpager />
   <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView 
@@ -53,7 +53,7 @@ dependencies {
 
 在menu文件夹创建新的menu xml
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -84,7 +84,7 @@ dependencies {
 ```
 
 添加选项监听器addOnSelectedListener
-```
+```java
 mByeBurger.setOnNavigationItemSelectedListener(
         new BottomNavigationView.OnNavigationItemSelectedListener() {
           @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
