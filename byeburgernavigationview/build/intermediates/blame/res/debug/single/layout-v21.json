@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/wing/project/Samples/ByeBurgerBarDemo/byeburgernavigationview/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action_tombstone.xml"
+    }
+]
