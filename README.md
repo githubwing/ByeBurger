@@ -40,7 +40,12 @@ dependencies {
   }
 ```
 
-You only need to change the root view to CoordinatorLayout,and add one line code "app:layout_behavior" like this into **ANY** view, the your view hiding on scroll.Your titleBar can be Toolbar,LinearLayout and so on. Your NavigationView can be BottomNavigationView or TabLayout,or **Any** View you put in xml.
+You only need to change the root view to CoordinatorLayout,
+And add one line code "app:layout_behavior" like the code
+into **ANY** view, the your view hiding on scroll.
+Your titleBar can be Toolbar,LinearLayout and so on. 
+Your NavigationView can be BottomNavigationView or TabLayout,
+or **Any** View you put in xml.
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
