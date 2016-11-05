@@ -1,5 +1,5 @@
 # ByeBurger
-[![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
+[![](https://jitpack.io/v/githubwing/ByeBurger.svg)](https://jitpack.io/#githubwing/ByeBurger)
 
 
 Bye Burger~  this is a easy way to make  your title or bottom navigation hiding on scroll like this
