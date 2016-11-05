@@ -44,7 +44,7 @@ dependencies {
   <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
-   app:layout_behavior="@string/bye_burger_title_behavior"
+   app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
 </android.support.design.widget.CoordinatorLayout>
 
