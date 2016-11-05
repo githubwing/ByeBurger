@@ -7,29 +7,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.wingsofts.byeburgerbardemo.MainActivity"
     >
 
+  <com.wingsofts.byeburgerbardemo.NoScrollViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
 
-<com.wingsofts.byeburgerbardemo.NoScrollViewPager
-    android:id="@+id/viewpager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+  </com.wingsofts.byeburgerbardemo.NoScrollViewPager>
 
-</com.wingsofts.byeburgerbardemo.NoScrollViewPager>
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/bye_burger"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="@color/colorPrimary"
+      app:itemIconTint="#fff"
+      app:itemTextColor="#fff"
+      app:layout_behavior="@string/bye_burger_bottom_behavior"
+      app:menu="@menu/bottom"
+      >
+  </android.support.design.widget.BottomNavigationView>
+  <android.support.v7.widget.Toolbar
+      app:layout_behavior="@string/bye_burger_title_behavior"
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/colorPrimary"
+      >
 
-    <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView
-        app:layout_behavior="@string/bye_burger_behavior"
-        android:background="#fff"
-        android:layout_gravity="bottom"
-        android:id="@+id/bye_burger"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/colorPrimary"
-        app:menu="@menu/bottom"
-        >
-    </com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView>
-
+  </android.support.v7.widget.Toolbar>
 </android.support.design.widget.CoordinatorLayout>

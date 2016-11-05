@@ -1,4 +1,7 @@
 <resources>
   <string name="app_name">ByeBurgerNavigationView</string>
   <string name="bye_burger_behavior">com.wingsofts.byeburgernavigationview.ByeBurgerBehavior</string>
+
+  <string name="bye_burger_bottom_behavior">com.wingsofts.byeburgernavigationview.ByeBurgerBottomBehavior</string>
+  <string name="bye_burger_title_behavior">com.wingsofts.byeburgernavigationview.ByeBurgerTitleBehavior</string>
 </resources>
