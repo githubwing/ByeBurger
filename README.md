@@ -11,7 +11,8 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 ##[中文文档](https://github.com/githubwing/ByeBurger/blob/master/README_CN.md)
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title_bottom.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/webview.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/book.gif)
 
 
 
