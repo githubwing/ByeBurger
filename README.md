@@ -50,10 +50,11 @@ or **Any** View you put in xml.
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
-  <Toolbar
+
+  <Viewpager />
+    <Toolbar
   	app:layout_behavior="@string/bye_burger_title_behavior"
   />
-  <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
    app:layout_behavior="@string/bye_burger_bottom_behavior"
