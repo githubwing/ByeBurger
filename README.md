@@ -41,8 +41,8 @@ dependencies {
 ```
 
 You only need to change the root view to CoordinatorLayout,
-And add one line code "app:layout_behavior" like the code
-into **ANY** view, the your view hiding on scroll.
+And add one line code "app:layout_behavior" like the bottom
+into **ANY** view, Then your view hiding on scroll.
 Your titleBar can be Toolbar,LinearLayout and so on. 
 Your NavigationView can be BottomNavigationView or TabLayout,
 or **Any** View you put in xml.
@@ -55,7 +55,7 @@ or **Any** View you put in xml.
   <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
-   app:layout_behavior="@string/bye_burger_title_behavior"
+   app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
 </android.support.design.widget.CoordinatorLayout>
 
