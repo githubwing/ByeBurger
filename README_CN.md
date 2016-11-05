@@ -52,7 +52,8 @@ dependencies {
 
 ```
 # 注意
-CoordinatorLayout类似于FrameLayout，所以注意层次
+CoordinatorLayout类似于FrameLayout，所以注意xml层次，Title和Bottom Tab要在xml下方。
+
 只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
 在ListView下，是不生效的。
