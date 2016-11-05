@@ -39,10 +39,11 @@ dependencies {
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
-  <Toolbar
+ 
+  <Viewpager />
+   <Toolbar
   	app:layout_behavior="@string/bye_burger_title_behavior"
   />
-  <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
    app:layout_behavior="@string/bye_burger_bottom_behavior"
@@ -51,6 +52,7 @@ dependencies {
 
 ```
 # 注意
+CoordinatorLayout类似于FrameLayout，所以注意层次
 只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
 在ListView下，是不生效的。
