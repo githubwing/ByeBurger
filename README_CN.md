@@ -1,13 +1,13 @@
-# ByeBurgerNavigationView
-拜拜吧 汉堡菜单
+# ByeBurger
+拜拜吧 汉堡菜单, 这是一个极其简便的快速实现隐藏标题栏和导航栏的库。
 
 [![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
 
 这是一个全新底部菜单交互的实现 [再见，汉堡菜单，我们有了新的 Android 交互设计方案](https://github.com/xitu/gold-miner/blob/master/TODO/bye-bye-burger.md)
 
 
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/preview.gif)
-
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title_bottom.gif)
 
 
 > *   **滚动时隐藏：** 我们希望在用户的屏幕上显示尽可能多的内容。因此，我们决定在向下滚动的时候隐藏导航栏，从而给内容区域提供更多的空间。而向上滚动可以使导航栏重新显现。
@@ -32,73 +32,40 @@ dependencies {
   compile 'com.android.support:design:25.0.0'
   }
 ```
-在布局中。使用CoordinatorLayout作为跟布局
+
+你只需要在布局中，使用CoordinatorLayout作为根布局,然后向你的**任何**View中插入一句app:layout_behavior属性，即可实现滑动的隐藏和显示。你的标题栏可以是Toolbar或者LinearLayout或者什么鬼，同样你的底部导航栏可以是最新的BottomNavigationView亦或者TabLayout在古老一点的RadioButton都可以！
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
+  <Toolbar
+  	app:layout_behavior="@string/bye_burger_title_behavior"
+  />
   <Viewpager />
-  <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView 
-      <--! important --> 
-        app:menu="@menu/bottom"
-        app:layout_behavior="@string/bye_burger_behavior"  
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/colorPrimary"
-   />
-      
+  <BottomTab 
+   android:layout_gravity="bottom"
+   app:layout_behavior="@string/bye_burger_title_behavior"
+  />      
 </android.support.design.widget.CoordinatorLayout>
 
 ```
+# 注意
+只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
+在ListView下，是不生效的。
 
-在menu文件夹创建新的menu xml
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-  <item
-      android:icon="@drawable/ic_home_black_24dp"
-      android:enabled="true"
-      app:showAsAction="ifRoom"
-      android:title="home"/>
-
-  <item
-      android:icon="@drawable/ic_search_black_24dp"
-      android:enabled="true"
-      app:showAsAction="ifRoom"
-      android:title="search"/>
-  <item
-      android:icon="@drawable/ic_account_circle_black_24dp"
-      android:enabled="true"
-      app:showAsAction="ifRoom"
-      android:title="me"
-      />
-  <item
-      android:icon="@drawable/ic_settings_black_24dp"
-      android:enabled="true"
-      app:showAsAction="ifRoom"
-      android:title="setting"
-      />
-</menu>
 ```
+# License
 
-添加选项监听器addOnSelectedListener
-```java
-mByeBurger.setOnNavigationItemSelectedListener(
-        new BottomNavigationView.OnNavigationItemSelectedListener() {
-          @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            if(item.getTitle().equals("home")){
-              mViewPager.setCurrentItem(0);
-            }else if(item.getTitle().equals("search")){
-              mViewPager.setCurrentItem(1);
-            }else if(item.getTitle().equals("me")){
-              mViewPager.setCurrentItem(2);
-            }else if(item.getTitle().equals("setting")){
-              mViewPager.setCurrentItem(3);
-            }
-            return false;
-          }
-        });
-```
+    Copyright 2016 androidwing1992
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
