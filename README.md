@@ -2,7 +2,7 @@
 [![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
 
 
-Bye Burger~  this is a easy to make  your title or bottom navigation hiding on scroll like this
+Bye Burger~  this is a easy way to make  your title or bottom navigation hiding on scroll like this
 
 [Bye, Bye Burger!
 What we learned from implementing the new Android Bottom Navigation](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.qibuxdc1t)
