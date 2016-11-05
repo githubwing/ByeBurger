@@ -1,4 +1,7 @@
 # ByeBurgerNavigationView
+[![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
+
+
 Bye Burger~  this is a new android Bottom Navigation like this
 
 [Bye, Bye Burger!
@@ -7,7 +10,7 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 
 ##[中文文档](https://github.com/githubwing/ByeBurgerNavigationView/blob/master/README_CN.md)
 
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/preview.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/preview.gif)
 
 > **Hiding on scroll:** We wanted to provide as much content as possible on our user’s screens. Consequently, we decided to make the navigation hide on scroll, thus making more room for the content area. Scrolling up makes the navigation fade back in.
 
@@ -18,15 +21,25 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 
 compile the library in your build.gralde
 
-```
-  compile project(':library')
-  
+```gradle
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+dependencies {
+  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
   compile 'com.android.support:design:25.0.0'
+  }
 ```
 
 layout xml
 
-```
+```xml
 <android.support.design.widget.CoordinatorLayout>
   <Viewpager />
   <com.wingsofts.byeburgernavigationview.ByeBurgerNavigationView 
@@ -46,7 +59,7 @@ layout xml
 
 menu xml
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -77,7 +90,7 @@ menu xml
 ```
 
 addOnSelectedListener
-```
+```java
 mByeBurger.setOnNavigationItemSelectedListener(
         new BottomNavigationView.OnNavigationItemSelectedListener() {
           @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -94,3 +107,18 @@ mByeBurger.setOnNavigationItemSelectedListener(
           }
         });
 ```
+# License
+
+    Copyright 2016 androidwing1992
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
