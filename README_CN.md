@@ -28,7 +28,7 @@ allprojects {
 
 
 dependencies {
-  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
+   compile 'com.github.githubwing:ByeBurger:1.1.0'
   compile 'com.android.support:design:25.0.0'
   }
 ```
