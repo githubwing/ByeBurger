@@ -8,8 +8,8 @@
 
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/webview.gif)
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/book.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/webview.gif)
 
 
 > *   **滚动时隐藏：** 我们希望在用户的屏幕上显示尽可能多的内容。因此，我们决定在向下滚动的时候隐藏导航栏，从而给内容区域提供更多的空间。而向上滚动可以使导航栏重新显现。
