@@ -56,7 +56,7 @@ You only need to change the root view to CoordinatorLayout,and add one line code
 
 ```
 
-```
+
 # License
 
     Copyright 2016 androidwing1992
