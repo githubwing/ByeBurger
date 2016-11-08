@@ -61,9 +61,9 @@ CoordinatorLayout类似于FrameLayout，所以注意xml层次，Title和Bottom T
 
 只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
-在ListView下，是不生效的。
+在**ListView**下，是**不生效**的。
 
-所有需要隐藏的，必须作为CoordinatorLayout的直接子view
+**所有需要隐藏的，必须作为CoordinatorLayout的直接子view**
 
 
 # License
