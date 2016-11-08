@@ -1,13 +1,15 @@
 # ByeBurger
 拜拜吧 汉堡菜单, 这是一个极其简便的快速实现隐藏标题栏和导航栏的库。
 
-[![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
+[![](https://jitpack.io/v/githubwing/ByeBurger.svg)](https://jitpack.io/#githubwing/ByeBurger)
+
 
 这是一个全新底部菜单交互的实现 [再见，汉堡菜单，我们有了新的 Android 交互设计方案](https://github.com/xitu/gold-miner/blob/master/TODO/bye-bye-burger.md)
 
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title_bottom.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/book.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/webview.gif)
 
 
 > *   **滚动时隐藏：** 我们希望在用户的屏幕上显示尽可能多的内容。因此，我们决定在向下滚动的时候隐藏导航栏，从而给内容区域提供更多的空间。而向上滚动可以使导航栏重新显现。
@@ -28,7 +30,7 @@ allprojects {
 
 
 dependencies {
-  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
+   compile 'com.github.githubwing:ByeBurger:1.1.0'
   compile 'com.android.support:design:25.0.0'
   }
 ```
@@ -37,23 +39,26 @@ dependencies {
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
-  <Toolbar
+ 
+  <Viewpager />
+   <Toolbar
   	app:layout_behavior="@string/bye_burger_title_behavior"
   />
-  <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
-   app:layout_behavior="@string/bye_burger_title_behavior"
+   app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
 </android.support.design.widget.CoordinatorLayout>
 
 ```
 # 注意
+CoordinatorLayout类似于FrameLayout，所以注意xml层次，Title和Bottom Tab要在xml下方。
+
 只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
 在ListView下，是不生效的。
 
-```
+
 # License
 
     Copyright 2016 androidwing1992

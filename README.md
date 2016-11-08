@@ -1,5 +1,5 @@
 # ByeBurger
-[![](https://jitpack.io/v/githubwing/ByeBurgerNavigationView.svg)](https://jitpack.io/#githubwing/ByeBurgerNavigationView)
+[![](https://jitpack.io/v/githubwing/ByeBurger.svg)](https://jitpack.io/#githubwing/ByeBurger)
 
 
 Bye Burger~  this is a easy way to make  your title or bottom navigation hiding on scroll like this
@@ -11,7 +11,8 @@ What we learned from implementing the new Android Bottom Navigation](https://med
 ##[中文文档](https://github.com/githubwing/ByeBurger/blob/master/README_CN.md)
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
-![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title_bottom.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/book.gif)
+![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/webview.gif)
 
 
 
@@ -35,27 +36,28 @@ allprojects {
 
 
 dependencies {
-  compile 'com.github.githubwing:ByeBurgerNavigationView:v1.0'
+   compile 'com.github.githubwing:ByeBurger:1.1.0'
   compile 'com.android.support:design:25.0.0'
   }
 ```
 
 You only need to change the root view to CoordinatorLayout,
-And add one line code "app:layout_behavior" like the code
-into **ANY** view, the your view hiding on scroll.
+And add one line code "app:layout_behavior" like the bottom
+into **ANY** view, Then your view hiding on scroll.
 Your titleBar can be Toolbar,LinearLayout and so on. 
 Your NavigationView can be BottomNavigationView or TabLayout,
 or **Any** View you put in xml.
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
-  <Toolbar
+
+  <Viewpager />
+    <Toolbar
   	app:layout_behavior="@string/bye_burger_title_behavior"
   />
-  <Viewpager />
   <BottomTab 
    android:layout_gravity="bottom"
-   app:layout_behavior="@string/bye_burger_title_behavior"
+   app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
 </android.support.design.widget.CoordinatorLayout>
 
