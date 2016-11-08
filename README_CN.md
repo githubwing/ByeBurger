@@ -30,12 +30,14 @@ allprojects {
 
 
 dependencies {
-   compile 'com.github.githubwing:ByeBurger:1.1.0'
+   compile 'com.github.githubwing:ByeBurger:1.2.0'
   compile 'com.android.support:design:25.0.0'
   }
 ```
 
 你只需要在布局中，使用CoordinatorLayout作为根布局,然后向你的**任何**View中插入一句app:layout_behavior属性，即可实现滑动的隐藏和显示。你的标题栏可以是Toolbar或者LinearLayout或者什么鬼，同样你的底部导航栏可以是最新的BottomNavigationView亦或者TabLayout在古老一点的RadioButton都可以！
+
+最新添加了对悬浮按钮的支持。
 
 ```xml
 <android.support.design.widget.CoordinatorLayout>
@@ -48,6 +50,9 @@ dependencies {
    android:layout_gravity="bottom"
    app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
+  <FloatingActionButton
+   app:layout_behavior="@string/bye_burger_float_behavior"
+  />
 </android.support.design.widget.CoordinatorLayout>
 
 ```
