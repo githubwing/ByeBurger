@@ -42,8 +42,8 @@ dependencies {
 ```xml
 <android.support.design.widget.CoordinatorLayout>
  
-  <Viewpager />
-   <Toolbar
+  <Viewpager /><--! 这里放你的布局内容，可以是任意view-->
+   <Toolbar 
   	app:layout_behavior="@string/bye_burger_title_behavior"
   />
   <BottomTab 
@@ -62,6 +62,8 @@ CoordinatorLayout类似于FrameLayout，所以注意xml层次，Title和Bottom T
 只有实现NestScorll接口View的才可以实现监听，例如RecyclerView、NestScrollView.
 
 在ListView下，是不生效的。
+
+所有需要隐藏的，必须作为CoordinatorLayout的直接子view
 
 
 # License
