@@ -8,7 +8,7 @@ Bye Burger~  this is a easy way to make  your title or bottom navigation hiding 
 What we learned from implementing the new Android Bottom Navigation](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.qibuxdc1t)
 
 
-##[中文文档](https://github.com/githubwing/ByeBurger/blob/master/README_CN.md)
+# [中文文档](https://github.com/githubwing/ByeBurger/blob/master/README_CN.md)
 
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/title.gif)
 ![image](https://github.com/githubwing/ByeBurgerNavigationView/raw/master/img/book.gif)
@@ -36,7 +36,7 @@ allprojects {
 
 
 dependencies {
-   compile 'com.github.githubwing:ByeBurger:1.1.0'
+   compile 'com.github.githubwing:ByeBurger:1.2.0'
   compile 'com.android.support:design:25.0.0'
   }
 ```
@@ -59,6 +59,9 @@ or **Any** View you put in xml.
    android:layout_gravity="bottom"
    app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
+  <FloatingActionButton
+    app:layout_behavior="@string/bye_burger_float_behavior"
+  />
 </android.support.design.widget.CoordinatorLayout>
 
 ```
