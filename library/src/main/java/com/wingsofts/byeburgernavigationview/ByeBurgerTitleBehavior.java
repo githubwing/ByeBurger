@@ -26,12 +26,6 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
 
   }
 
-  // on Scroll Started
-  @Override public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
-      View directTargetChild, View target, int nestedScrollAxes) {
-    return (nestedScrollAxes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
-  }
-
   @Override
   public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
       int dx, int dy, int[] consumed) {
