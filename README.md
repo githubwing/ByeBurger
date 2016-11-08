@@ -59,6 +59,9 @@ or **Any** View you put in xml.
    android:layout_gravity="bottom"
    app:layout_behavior="@string/bye_burger_bottom_behavior"
   />      
+  <FloatingActionButton
+    app:layout_behavior="@string/bye_burger_float_behavior"
+  />
 </android.support.design.widget.CoordinatorLayout>
 
 ```
