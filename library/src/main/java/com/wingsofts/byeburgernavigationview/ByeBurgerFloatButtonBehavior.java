@@ -1,9 +1,5 @@
 package com.wingsofts.byeburgernavigationview;
 
-/**
- * Created by wing on 11/5/16.
- */
-
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewCompat;
@@ -12,16 +8,15 @@ import android.view.View;
 import android.view.ViewConfiguration;
 
 /**
- * Bye Bye Burger Android Title Bar Behavior
- *
- * Created by wing on 11/4/16.
+ * Behavior for Float Button
+ * Created by wing on 11/8/16.
  */
 
-public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
+public class ByeBurgerFloatButtonBehavior extends ByeBurgerBehavior {
 
-  private TranslateAnimateHelper mAnimateHelper;
+  private ScaleAnimateHelper mAnimateHelper;
 
-  public ByeBurgerTitleBehavior(Context context, AttributeSet attrs) {
+  public ByeBurgerFloatButtonBehavior(Context context, AttributeSet attrs) {
     super(context, attrs);
 
   }
@@ -29,6 +24,7 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
   // on Scroll Started
   @Override public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
       View directTargetChild, View target, int nestedScrollAxes) {
+
     return (nestedScrollAxes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
   }
 
@@ -38,13 +34,10 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
 
     if (isFirstMove) {
       isFirstMove = false;
-      mAnimateHelper = TranslateAnimateHelper.get(child);
-      mAnimateHelper.setStartY(child.getY());
-      mAnimateHelper.setMode(TranslateAnimateHelper.MODE_TITLE);
+      mAnimateHelper = ScaleAnimateHelper.get(child);
     }
     if (Math.abs(dy) > mTouchSlop) {
       if (dy < 0) {
-
         if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_HIDE) {
           mAnimateHelper.show();
         }
@@ -56,4 +49,3 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
     }
   }
 }
-
