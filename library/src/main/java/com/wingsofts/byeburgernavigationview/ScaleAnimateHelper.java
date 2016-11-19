@@ -1,5 +1,6 @@
 package com.wingsofts.byeburgernavigationview;
 
+import android.animation.ValueAnimator;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
@@ -26,18 +27,31 @@ public class ScaleAnimateHelper implements AnimateHelper {
   }
 
   @Override public void show() {
-    mTarget.setVisibility(View.VISIBLE);
-    ScaleAnimation sa = new ScaleAnimation(0f,1f,0f,1f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-    sa.setDuration(300);
-    mTarget.startAnimation(sa);
+    ValueAnimator va = ValueAnimator.ofFloat(mTarget.getScaleX(),1);
+    va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+      @Override public void onAnimationUpdate(ValueAnimator valueAnimator) {
+        float scale = (Float) valueAnimator.getAnimatedValue();
+        mTarget.setScaleX(scale);
+        mTarget.setScaleY(scale);
+      }
+    });
+    va.setDuration(300);
+    va.start();
+
     mCurrentState = STATE_SHOW;
   }
 
   @Override public void hide() {
-    mTarget.setVisibility(View.GONE);
-    ScaleAnimation sa = new ScaleAnimation(1.0f,0f,1.0f,0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-    sa.setDuration(300);
-    mTarget.startAnimation(sa);
+    ValueAnimator va = ValueAnimator.ofFloat(mTarget.getScaleX(),0);
+    va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+      @Override public void onAnimationUpdate(ValueAnimator valueAnimator) {
+        float scale = (Float) valueAnimator.getAnimatedValue();
+        mTarget.setScaleX(scale);
+        mTarget.setScaleY(scale);
+      }
+    });
+    va.setDuration(300);
+    va.start();
     mCurrentState = STATE_HIDE;
   }
 
