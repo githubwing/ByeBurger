@@ -36,7 +36,7 @@ allprojects {
 
 
 dependencies {
-   compile 'com.github.githubwing:ByeBurger:1.2.2'
+   compile 'com.github.githubwing:ByeBurger:1.2.3'
   compile 'com.android.support:design:25.0.0'
   }
 ```
