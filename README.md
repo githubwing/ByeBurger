@@ -36,7 +36,7 @@ allprojects {
 
 
 dependencies {
-   compile 'com.github.githubwing:ByeBurger:1.2.2'
+   compile 'com.github.githubwing:ByeBurger:1.2.3'
   compile 'com.android.support:design:25.0.0'
   }
 ```
@@ -63,6 +63,15 @@ or **Any** View you put in xml.
     app:layout_behavior="@string/bye_burger_float_behavior"
   />
 </android.support.design.widget.CoordinatorLayout>
+
+```
+
+You can control it by call method show() hide()
+
+```java
+    ByeBurgerBehavior.from(mToolbar).hide()
+
+    ByeBurgerBehavior.from(mFloatButton).show()
 
 ```
 
