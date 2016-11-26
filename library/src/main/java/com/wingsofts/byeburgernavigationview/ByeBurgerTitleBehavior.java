@@ -30,26 +30,13 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
     return super.layoutDependsOn(parent, child, dependency);
   }
 
-  @Override
-  public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
-      int dx, int dy, int[] consumed) {
+
+  @Override protected void onNestPreScrollInit(View child) {
 
     if (isFirstMove) {
       isFirstMove = false;
       mAnimateHelper.setStartY(child.getY());
       mAnimateHelper.setMode(TranslateAnimateHelper.MODE_TITLE);
-    }
-    if (Math.abs(dy) > mTouchSlop) {
-      if (dy < 0) {
-
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_HIDE) {
-          mAnimateHelper.show();
-        }
-      } else if (dy > 0) {
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_SHOW) {
-          mAnimateHelper.hide();
-        }
-      }
     }
   }
 }

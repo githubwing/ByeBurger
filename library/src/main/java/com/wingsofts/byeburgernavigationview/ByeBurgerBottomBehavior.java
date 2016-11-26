@@ -36,21 +36,9 @@ public class ByeBurgerBottomBehavior extends ByeBurgerBehavior {
     return super.onDependentViewChanged(parent, child, dependency);
   }
 
-  @Override
-  public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
-      int dx, int dy, int[] consumed) {
 
-    if (Math.abs(dy) > mTouchSlop) {
-      if (dy < 0) {
 
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_HIDE) {
-          mAnimateHelper.show();
-        }
-      } else if (dy > 0) {
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_SHOW) {
-          mAnimateHelper.hide();
-        }
-      }
-    }
+  @Override protected void onNestPreScrollInit(View child) {
+
   }
 }

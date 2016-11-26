@@ -13,12 +13,13 @@ import android.view.ViewGroup;
  * Created by wing on 11/8/16.
  */
 
-public class ByeBurgerBehavior extends CoordinatorLayout.Behavior<View> {
+abstract public class ByeBurgerBehavior extends CoordinatorLayout.Behavior<View> {
 
   protected final int mTouchSlop;
   protected boolean isFirstMove = true;
   protected boolean canInit = true;
   protected AnimateHelper mAnimateHelper;
+
   public ByeBurgerBehavior(Context context, AttributeSet attrs) {
     super(context, attrs);
     mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
@@ -31,14 +32,33 @@ public class ByeBurgerBehavior extends CoordinatorLayout.Behavior<View> {
     return (nestedScrollAxes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
   }
 
-  public void show(){
+  @Override
+  public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
+      int dx, int dy, int[] consumed) {
+    onNestPreScrollInit(child);
+
+    if (Math.abs(dy) > 2) {
+      if (dy < 0) {
+        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_HIDE) {
+          mAnimateHelper.show();
+        }
+      } else if (dy > 0) {
+        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_SHOW) {
+          mAnimateHelper.hide();
+        }
+      }
+    }
+  }
+
+  protected abstract void onNestPreScrollInit(View child);
+
+  public void show() {
     mAnimateHelper.show();
   }
 
-  public void hide(){
+  public void hide() {
     mAnimateHelper.hide();
   }
-
 
   public static ByeBurgerBehavior from(View view) {
     ViewGroup.LayoutParams params = view.getLayoutParams();
@@ -47,8 +67,7 @@ public class ByeBurgerBehavior extends CoordinatorLayout.Behavior<View> {
     }
     CoordinatorLayout.Behavior behavior = ((CoordinatorLayout.LayoutParams) params).getBehavior();
     if (!(behavior instanceof ByeBurgerBehavior)) {
-      throw new IllegalArgumentException(
-          "The view is not associated with ByeBurgerBehavior");
+      throw new IllegalArgumentException("The view is not associated with ByeBurgerBehavior");
     }
     return (ByeBurgerBehavior) behavior;
   }

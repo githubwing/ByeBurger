@@ -26,22 +26,8 @@ public class ByeBurgerFloatButtonBehavior extends ByeBurgerBehavior {
     return super.layoutDependsOn(parent, child, dependency);
   }
 
-  @Override
-  public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
-      int dx, int dy, int[] consumed) {
-    if (isFirstMove) {
-      isFirstMove = false;
-    }
-    if (Math.abs(dy) > mTouchSlop) {
-      if (dy < 0) {
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_HIDE) {
-          mAnimateHelper.show();
-        }
-      } else if (dy > 0) {
-        if (mAnimateHelper.getState() == TranslateAnimateHelper.STATE_SHOW) {
-          mAnimateHelper.hide();
-        }
-      }
-    }
+
+  @Override protected void onNestPreScrollInit(View child) {
+
   }
 }
