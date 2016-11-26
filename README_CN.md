@@ -30,7 +30,7 @@ allprojects {
 
 
 dependencies {
-   compile 'com.github.githubwing:ByeBurger:1.2.2'
+   compile 'com.github.githubwing:ByeBurger:1.2.3'
   compile 'com.android.support:design:25.0.0'
   }
 ```
@@ -65,6 +65,13 @@ CoordinatorLayout类似于FrameLayout，所以注意xml层次，Title和Bottom T
 
 **所有需要隐藏的，必须作为CoordinatorLayout的直接子view**
 
+你也可以手动调用如下方法，来控制显隐。
+
+```
+ByeBurgerBehavior.from(mToolbar).hide()
+
+ByeBurgerBehavior.show(mFloatButton).show()
+```
 
 # License
 
