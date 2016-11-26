@@ -66,6 +66,15 @@ or **Any** View you put in xml.
 
 ```
 
+You can control it by call method show() hide()
+
+```java
+    ByeBurgerBehavior.from(mToolbar).hide()
+
+    ByeBurgerBehavior.from(mFloatButton).show()
+
+```
+
 
 # License
 
