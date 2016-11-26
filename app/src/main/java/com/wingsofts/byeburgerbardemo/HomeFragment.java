@@ -22,7 +22,6 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
     recyclerView.setAdapter(new Adapter());
     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
     return v;
   }
 

@@ -41,6 +41,7 @@
   </android.support.v7.widget.Toolbar>
 
   <android.support.design.widget.FloatingActionButton
+      android:id="@+id/floatButton"
       app:layout_behavior="@string/bye_burger_float_behavior"
       android:layout_gravity="bottom|right"
       app:backgroundTint="@color/colorPrimary"

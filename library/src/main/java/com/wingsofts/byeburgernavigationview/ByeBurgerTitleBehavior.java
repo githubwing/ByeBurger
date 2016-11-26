@@ -18,12 +18,16 @@ import android.view.ViewConfiguration;
  */
 
 public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
-
-  private TranslateAnimateHelper mAnimateHelper;
-
   public ByeBurgerTitleBehavior(Context context, AttributeSet attrs) {
     super(context, attrs);
+  }
 
+  @Override public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
+    if (canInit) {
+      mAnimateHelper = TranslateAnimateHelper.get(child);
+      canInit = false;
+    }
+    return super.layoutDependsOn(parent, child, dependency);
   }
 
   @Override
@@ -32,7 +36,6 @@ public class ByeBurgerTitleBehavior extends ByeBurgerBehavior {
 
     if (isFirstMove) {
       isFirstMove = false;
-      mAnimateHelper = TranslateAnimateHelper.get(child);
       mAnimateHelper.setStartY(child.getY());
       mAnimateHelper.setMode(TranslateAnimateHelper.MODE_TITLE);
     }

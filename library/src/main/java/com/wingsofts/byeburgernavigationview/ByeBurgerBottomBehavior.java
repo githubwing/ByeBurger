@@ -15,24 +15,31 @@ import android.view.ViewConfiguration;
 
 public class ByeBurgerBottomBehavior extends ByeBurgerBehavior {
 
-  private TranslateAnimateHelper mAnimateHelper;
-
   public ByeBurgerBottomBehavior(Context context, AttributeSet attrs) {
     super(context, attrs);
   }
 
+  @Override public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
 
+
+    return true;
+  }
+
+  @Override
+  public boolean onDependentViewChanged(CoordinatorLayout parent, View child, View dependency) {
+    if (canInit) {
+      canInit = false;
+      mAnimateHelper = TranslateAnimateHelper.get(child);
+      mAnimateHelper.setStartY(child.getY());
+      mAnimateHelper.setMode(TranslateAnimateHelper.MODE_BOTTOM);
+    }
+    return super.onDependentViewChanged(parent, child, dependency);
+  }
 
   @Override
   public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
       int dx, int dy, int[] consumed) {
 
-    if (isFirstMove) {
-      isFirstMove = false;
-      mAnimateHelper = TranslateAnimateHelper.get(child);
-      mAnimateHelper.setStartY(child.getY());
-      mAnimateHelper.setMode(TranslateAnimateHelper.MODE_BOTTOM);
-    }
     if (Math.abs(dy) > mTouchSlop) {
       if (dy < 0) {
 

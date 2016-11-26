@@ -14,22 +14,23 @@ import android.view.ViewConfiguration;
 
 public class ByeBurgerFloatButtonBehavior extends ByeBurgerBehavior {
 
-  private ScaleAnimateHelper mAnimateHelper;
-
   public ByeBurgerFloatButtonBehavior(Context context, AttributeSet attrs) {
     super(context, attrs);
-
   }
 
-
+  @Override public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
+    if(canInit) {
+      mAnimateHelper = ScaleAnimateHelper.get(child);
+      canInit = false;
+    }
+    return super.layoutDependsOn(parent, child, dependency);
+  }
 
   @Override
   public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
       int dx, int dy, int[] consumed) {
-
     if (isFirstMove) {
       isFirstMove = false;
-      mAnimateHelper = ScaleAnimateHelper.get(child);
     }
     if (Math.abs(dy) > mTouchSlop) {
       if (dy < 0) {
